@@ -1,0 +1,49 @@
+﻿@page
+@model SerieFilme.Pages.Series.DeleteModel
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1 style="color:white; text-shadow: 0.1em 0.1em 0.2em black">Tem certeza que deseja excluir este registro?</h1>
+<div>
+    <hr />
+    <dl class="row" style="color:white; text-shadow: 0.1em 0.1em 0.2em black">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Serie.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Serie.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Serie.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Serie.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Serie.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Serie.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Serie.Epi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Serie.Epi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Serie.Temp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Serie.Temp)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Serie.ID" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar a Lista</a>
+    </form>
+</div>
